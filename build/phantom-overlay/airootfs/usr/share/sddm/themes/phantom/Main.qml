@@ -4,7 +4,6 @@
 import QtQuick 2.15
 import QtQuick.Layouts 1.15
 import QtQuick.Controls 2.15
-import QtGraphicalEffects 1.0
 import SddmComponents 2.0
 
 Rectangle {
@@ -22,8 +21,6 @@ Rectangle {
     property color textSecondary: config.TextSecondary || "#6B6B80"
     property string fontFamily: config.Font || "Noto Sans"
     property int baseFontSize: config.FontSize ? parseInt(config.FontSize) : 12
-
-    FontLoader { id: mainFont; name: root.fontFamily }
 
     // ── Left panel: branding + clock ────────────────────────
     Rectangle {
@@ -170,7 +167,7 @@ Rectangle {
 
                 Text {
                     anchors.centerIn: parent
-                    text: "\u{1F464}"
+                    text: "\uD83D\uDC64"
                     font.pixelSize: 32
                 }
             }
